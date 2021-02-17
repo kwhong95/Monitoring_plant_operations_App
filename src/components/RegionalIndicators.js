@@ -6,7 +6,13 @@ const RegionalIndicators = () => {
 
     const data = [
         {
-            "id": "NG 총 유량[K]",
+            "title": (
+                <text style={{ fill: '#fff' }}>
+                    <tspan >
+                        NG 총 유량[K]
+                    </tspan>
+                </text>
+            ),
             "ranges": [
                 0,
                 0.5,
@@ -23,7 +29,13 @@ const RegionalIndicators = () => {
             ]
         },
         {
-            "id": "GD 열 소비율[K]",
+            "title": (
+                <text style={{ fill: '#fff'}}>
+                    <tspan >
+                        GD 열 소비율[K]
+                    </tspan>
+                </text>
+            ),
             "ranges": [
                 0,
                 0.5,
@@ -45,7 +57,7 @@ const RegionalIndicators = () => {
         <Card
             title="지역별 지표(실시간)"
         >
-            <Row>
+            <Row style={{ textAlign: 'center'}}>
                 {ridata.map((ridata, index) => (
                     <Col span={8} key={index}>
                         <Typography>{ridata.title}</Typography>
@@ -56,15 +68,15 @@ const RegionalIndicators = () => {
                 ))}
             </Row>
             <Row>
-                <Col span={24} style={{ height: '40vh'}}>
+                <Col span={24} style={{ height: '33vh'}}>
                     <ResponsiveBullet
                         data={data}
-                        margin={{ top: 50, right: 30, bottom: 20, left: 30 }}
+                        margin={{ top:70, right: 30, bottom: 20, left: 10 }}
                         layout="vertical"
                         spacing={70}
                         titleAlign="center"
-                        titleOffsetX={-25}
-                        titleOffsetY={-30}
+                        titleOffsetX={-35}
+                        titleOffsetY={-20}
                         measureSize={0.7}
                         rangeColors="#101010"
                         measureColors="#177DDC"
