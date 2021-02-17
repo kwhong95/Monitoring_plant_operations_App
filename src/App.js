@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import {Layout, PageHeader, Menu} from 'antd'
-import { DashboardOutlined, AreaChartOutlined, GlobalOutlined } from '@ant-design/icons'
+import {Layout, PageHeader } from 'antd'
 import 'antd/dist/antd.dark.css';
 import ContentLayout from "./components/ContentLayout";
 

@@ -8,7 +8,7 @@ const Monitoring = () => {
     return (
         <Card
             title="발전소 모니터링"
-            style={{ height: '30vh' }}
+            style={{ height: '25vh' }}
             extra={
                 <div>
                     <div style={{ borderBottom: "2px solid #177DDC" }} />
@@ -16,7 +16,7 @@ const Monitoring = () => {
                 </div>
             }
         >
-            <Row>
+            <Row style={{ textAlign: "center", height: '100%' }}>
                 {monitorData.Monitoring.map((data, index) => (
                     <Col span={4} key={index} >
                         <Typography>{data.title}</Typography>
@@ -28,7 +28,7 @@ const Monitoring = () => {
                             autoDraw
                             smooth
                         />
-                        <Typography>CUR: {data.cur}{data.unit}</Typography>
+                        <Typography>실시간 : {data.cur.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{data.unit}</Typography>
                     </Col>
                 ))}
             </Row>

@@ -59,6 +59,7 @@
       ]
     },
     {
+      "key": 2,
       "region": "Power Plant #2",
       "curOut": 3374,
       "expOut": 3917,
@@ -116,6 +117,7 @@
       ]
     },
     {
+      "key": 3,
       "region": "Power Plant #3",
       "curOut": 655370,
       "expOut": 714453,
