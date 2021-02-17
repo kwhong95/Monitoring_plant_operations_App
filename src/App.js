@@ -2,6 +2,7 @@ import { useState } from 'react'
 import {Layout, PageHeader, Menu} from 'antd'
 import { DashboardOutlined, AreaChartOutlined, GlobalOutlined } from '@ant-design/icons'
 import 'antd/dist/antd.dark.css';
+import ContentLayout from "./components/ContentLayout";
 
 const { Header, Sider, Content } = Layout
 
@@ -38,7 +39,9 @@ function App() {
                   >지역 세부사항</Menu.Item>
               </Menu>
           </Sider>
-          <Content>Content</Content>
+          <Content>
+              <ContentLayout />
+          </Content>
         </Layout>
       </Layout>
   );
