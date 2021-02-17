@@ -1,22 +1,15 @@
 import {Card, Col, Row} from "antd";
 import Monitoring from "./Monitoring";
+import RegionalIndicators from "./RegionalIndicators";
 
 const ContentLayout = () => {
     return (
         <Row>
             <Col span={24}>
-                <Card
-                    title="발전소 모니터링"
-                >
-                    <Monitoring />
-                </Card>
+                <Monitoring />
             </Col>
             <Col span={8}>
-                <Card
-                    title="지역별 지표(실시간)"
-                >
-
-                </Card>
+                <RegionalIndicators />
             </Col>
             <Col span={16}>
                 <Card
