@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import {Layout, PageHeader} from 'antd'
+import 'antd/dist/antd.dark.css';
+
+const { Header, Sider, Content } = Layout
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Layout>
+        <Header>
+            <PageHeader
+                title="발전소 운영 모니터링"
+            />
+        </Header>
+        <Layout>
+          <Sider>Sider</Sider>
+          <Content>Content</Content>
+        </Layout>
+      </Layout>
   );
 }
 
