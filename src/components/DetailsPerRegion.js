@@ -1,12 +1,12 @@
 import {Row, Col, Card, Typography, Table, Descriptions} from "antd"
 import { useParams } from 'react-router-dom'
 import { details } from '../details.json'
+import GoogleMap from "./GoogleMap";
 
 const DetailsPerRegion = () => {
     const { id } = useParams();
 
     const Models = details.map((data, idx) => data.models[idx]);
-    console.log(Models);
 
     const columns = [
         {
@@ -23,11 +23,15 @@ const DetailsPerRegion = () => {
             title: "예상 대비",
             dataIndex: "CurVsExp",
             key: "CurVsExp",
+            render: text => <Typography>{text}%</Typography>
         },
         {
             title: "용량",
             dataIndex: "MoC",
             key: "MoC",
+            render: text => <Typography>
+                {text.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}kW
+            </Typography>
         }
     ]
 
@@ -53,7 +57,7 @@ const DetailsPerRegion = () => {
                         <Descriptions.Item
                             label="시설 지도"
                         >
-                            Map
+                            <GoogleMap />
                         </Descriptions.Item>
                     </Descriptions>
                 </Col>
