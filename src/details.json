@@ -2,15 +2,14 @@
   "details": [
     {
       "key": 1,
-      "region": "Power Plant #1",
+      "region": "PowerPlant1",
       "curOut": 350370,
       "expOut": 420453,
       "CurVsExp": 83,
       "trends": [380286, 381032, 380932, 380543, 370983, 370776, 370903, 367890, 360943, 360294, 359434, 334045, 350370],
       "LSurvey": 3,
-      "model": [
+      "models": [
         {
-          "model1": {
             "name": "VirtualModel #1",
             "CVETrends": [
               3639.93,
@@ -25,7 +24,7 @@
             "CurVsExp": 95,
             "MoC": 14400
           },
-          "model2": {
+        {
             "name": "VirtualModel #2",
             "CVETrends": [
               752.32,
@@ -40,7 +39,7 @@
             "CurVsExp": 18,
             "MoC": 14400
           },
-          "model3": {
+        {
             "name": "VirtualModel #3",
             "CVETrends": [
               643.93,
@@ -54,21 +53,20 @@
             ],
             "CurVsExp": 19,
             "MoC": 14400
-          }
+
         }
       ]
     },
     {
       "key": 2,
-      "region": "Power Plant #2",
+      "region": "PowerPlant2",
       "curOut": 3374,
       "expOut": 3917,
       "CurVsExp": 86,
       "trends": [3343, 3810, 3809, 3805, 3709, 3707, 3709, 3678, 3609, 3602, 3594, 3340, 3503],
       "LSurvey": 19,
-      "model": [
+      "models": [
         {
-          "model1": {
             "name": "VirtualModel #1",
             "CVETrends": [
               363.93,
@@ -82,8 +80,8 @@
             ],
             "CurVsExp": 94,
             "MoC": 14400
-          },
-          "model2": {
+        },
+        {
             "name": "VirtualModel #2",
             "CVETrends": [
               752.32,
@@ -98,7 +96,7 @@
             "CurVsExp": 97,
             "MoC": 14400
           },
-          "model3": {
+        {
             "name": "VirtualModel #3",
             "CVETrends": [
               643.93,
@@ -113,20 +111,18 @@
             "CurVsExp": 89,
             "MoC": 14400
           }
-        }
       ]
     },
     {
       "key": 3,
-      "region": "Power Plant #3",
+      "region": "PowerPlant3",
       "curOut": 655370,
       "expOut": 714453,
       "CurVsExp": 92,
       "trends": [783286, 763032, 721932, 743543, 783983, 721776, 765903, 784890, 703943, 781294, 793434, 764045, 714370],
       "LSurvey": 7,
-      "model": [
+      "models": [
         {
-          "model1": {
             "name": "VirtualModel #1",
             "CVETrends": [
               7539.93,
@@ -141,7 +137,7 @@
             "CurVsExp": 99,
             "MoC": 14400
           },
-          "model2": {
+        {
             "name": "VirtualModel #2",
             "CVETrends": [
               1252.32,
@@ -156,7 +152,7 @@
             "CurVsExp": 18,
             "MoC": 14400
           },
-          "model3": {
+        {
             "name": "VirtualModel #3",
             "CVETrends": [
               6643.93,
@@ -170,8 +166,8 @@
             ],
             "CurVsExp": 97,
             "MoC": 14400
-          }
         }
+
       ]
     }
   ]

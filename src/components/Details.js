@@ -10,7 +10,7 @@ const Details = () => {
             title: "지역",
             dataIndex: "region",
             key: "region",
-            render: text => <Link to="PP1">{text}</Link>
+            render: text => <Link to={`/${text}`}>{text}</Link>
         },
         {
             title: "현재 출력(kW)",
