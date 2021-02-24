@@ -14,16 +14,26 @@ class  SimpleMap  extends  Component  {
     } ;
     render ( )  {
         return  (
-            < div  style = { {  height : '50vh' ,  width : '60vh'  } } >
+            < div  style = { {  height : '30vh' ,  width : '75vh'  } } >
                 < GoogleMapReact
                     bootstrapURLKeys = { {  key : 'AIzaSyAmY1CYd63q9wVGnLqyzIXGYRQAjq-vJiM' } }
                     defaultCenter = { this.props.center }
                     defaultZoom = { this.props.zoom }
                 >
                     <Marker
-                        text="Power Plant 1"
+                        text="VM1"
                         lat={37.348701185588666}
                         lng={126.73863959770671}
+                    />
+                    <Marker
+                        text="VM2"
+                        lat={37.348401185538665}
+                        lng={126.73863959770671}
+                    />
+                    <Marker
+                        text="VM3"
+                        lat={37.348601185588666}
+                        lng={126.73892959770671}
                     />
                 < / GoogleMapReact >
             < / div >

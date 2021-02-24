@@ -8,7 +8,7 @@ const Monitoring = () => {
     return (
         <Card
             title="발전소 모니터링"
-            style={{ height: '25vh' }}
+            style={{ height: '30vh' }}
             extra={
                 <div>
                     <div style={{ borderBottom: "2px solid #177DDC" }} />
@@ -28,7 +28,7 @@ const Monitoring = () => {
                             autoDraw
                             smooth
                         />
-                        <Typography>실시간 : {data.cur.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{data.unit}</Typography>
+                        <Typography>CUR : {data.cur.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{data.unit}</Typography>
                     </Col>
                 ))}
             </Row>

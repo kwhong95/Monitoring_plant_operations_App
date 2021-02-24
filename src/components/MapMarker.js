@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Typography} from "antd";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -9,7 +10,6 @@ const Wrapper = styled.div`
   height: 18px;
   background-color: #000;
   border: 2px solid #fff;
-  border-radius: 100%;
   user-select: none;
   transform: translate(-50%, -50%);
   cursor: ${(props) => (props.onClick ? 'pointer' : 'default')};
@@ -22,7 +22,11 @@ const Marker = ({ text, onClick }) => (
     <Wrapper
         alt={text}
         onClick={onClick}
-    />
+    >
+        <Typography
+            style={{ color: 'red', fontWeight: 'bold' }}
+        >{text}</Typography>
+    </Wrapper>
 );
 
 export default Marker;

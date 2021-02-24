@@ -1,4 +1,4 @@
-import { Col, Row } from "antd";
+import { Col, Row, Card } from "antd";
 import Monitoring from "./Monitoring";
 import RegionalIndicators from "./RegionalIndicators";
 import Details from "./Details";
@@ -13,7 +13,9 @@ const ContentLayout = () => {
                 <RegionalIndicators />
             </Col>
             <Col span={16}>
-                <Details />
+                <Card title="세부사항(전체)">
+                    <Details />
+                </Card>
             </Col>
         </Row>
     )

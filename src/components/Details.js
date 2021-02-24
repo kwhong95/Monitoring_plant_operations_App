@@ -1,59 +1,55 @@
-import React from 'react'
-import {Card, Table, Typography} from "antd"
+import { useMemo } from 'react'
+import { useTable } from 'react-table'
+import { COLUMNS } from '../libs/columns'
 import { details } from '../details.json'
-import { Link } from 'react-router-dom';
 
-const Details = () => {
+const Detail = () => {
+    const columns = useMemo(() => COLUMNS, []);
+    const data = useMemo(() => details, []);
 
-    const columns = [
-        {
-            title: "지역",
-            dataIndex: "region",
-            key: "region",
-            render: text => <Link to={`/${text}`}>{text}</Link>
-        },
-        {
-            title: "현재 출력(kW)",
-            dataIndex: "curOut",
-            key: "curOut",
-            render: text => <Typography>
-                {text.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </Typography>
-        },
-        {
-            title: "예상 출력(kw)",
-            dataIndex: "expOut",
-            key: "expOut",
-            render: text => <Typography>
-                {text.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </Typography>
-        },
-        {
-            title: "예상 대비 실제",
-            dataIndex: "CurVsExp",
-            key: "CurVsExp",
-            render: text => <Typography>{text}%</Typography>
-        },
-        {
-            title: "마지막 조사",
-            dataIndex: "LSurvey",
-            key: "LSurvey",
-            render: text => <Typography>{text}일전</Typography>
-        }
-        ]
+    const tableInstance = useTable({
+        columns,
+        data
+    });
+
+    const {
+        getTableProps,
+        getTableBodyProps,
+        headerGroups,
+        rows,
+        prepareRow
+    } = tableInstance
 
 
-
-    return (
-        <Card
-            title="세부사항(전 지역)"
-        >
-            <Table
-                columns={columns}
-                dataSource={details}
-            />
-        </Card>
+    return(
+        <table {...getTableProps()}>
+            <thead>
+            {
+                headerGroups.map(headerGroup => (
+                    <tr {...headerGroup.getHeaderGroupProps()}>
+                        {headerGroup.headers.map(column =>(
+                            <th{...column.getHeaderProps()}>{column.render("Header")}</th>
+                        ))}
+                    </tr>
+                ))
+            }
+            </thead>
+            <tbody {...getTableBodyProps()}>
+            {
+                rows.map(row => {
+                    prepareRow(row)
+                    return (
+                        <tr {...row.getRowProps()}>
+                            {row.cells.map(cell => {
+                                return <td {...cell.getCellProps}>{cell.render('Cell')}</td>
+                            })}
+                        </tr>
+                    )
+                })
+            }
+            </tbody>
+        </table>
     )
 }
 
-export default Details;
+export default Detail;
